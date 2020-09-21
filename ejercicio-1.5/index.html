@@ -21,14 +21,19 @@
     </body>
     
     <script>
-        function cambiarDimensionFuente(size) {
-            return function() { 
-            document.body.style.fontSize = size + 'px';
-            };
-        }
-        var size8 = cambiarDimensionFuente(8);
-        var size16 = cambiarDimensionFuente(16);
-        var size24 = cambiarDimensionFuente(24);
+        //function cambiarDimensionFuente(size) {
+        //    return function() { 
+        //        document.body.style.fontSize = size + 'px';
+        //    };
+        //}
+        //var size8 = cambiarDimensionFuente(8);
+        //var size16 = cambiarDimensionFuente(16);
+        //var size24 = cambiarDimensionFuente(24);
+
+        // Sin usar clousure
+        var size8 = function() { document.body.style.fontSize = '8px'; };
+        var size16 = function() { document.body.style.fontSize = '16px'; };
+        var size24 = function() { document.body.style.fontSize = '24px'; };
 
         function setClicks(){
             size8();
